@@ -3,7 +3,9 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires to s
 
 function Slider() {
    return (
-      <section>
+      // adding max-w-screen-2xl will make carousel completely responsive even on browser zoom in
+      // mx-auto for centering Carousel in center when zoom out
+      <section className="relative mx-auto mt-8 shadow-2xl max-w-screen-2xl">
         <Carousel
         autoPlay
         infiniteLoop
