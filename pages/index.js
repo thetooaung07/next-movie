@@ -13,8 +13,11 @@ export default function Home() {
       </Head>
       <Header></Header>
       {/* <Hero/> */}
-      <Slider/>
+      <main>
+         <Slider/>
       <StudioCard/>
+      </main>
+     
     </div>
   );
 }

@@ -4,13 +4,13 @@ function StudioCard() {
   return (
     // to add custom max width
     <section className="flex flex-col md:flex-row justify-center items-center mt-10 gap-6 px-8 max-w-[1400px] mx-auto">
-      <div className="studio-card group">
-        <Image src="/images/disnep.png" layout="fill" objectFit="cover" />
+      <div className="studio-card group ">
+        <Image src="/images/disnep.png" layout="fill" objectFit="contain" />
         <video
           autoPlay
           loop
           playsInline
-          className="hidden object-cover rounded-lg group-hover:inline"
+          className="hidden object-cover mx-auto rounded-lg group-hover:inline"
         >
           <source src="/videos/disney.mp4" type="video/mp4" />
         </video>
@@ -22,7 +22,7 @@ function StudioCard() {
           autoPlay
           loop
           playsInline
-          className="hidden object-cover rounded-lg group-hover:inline"
+          className="hidden object-cover mx-auto rounded-lg group-hover:inline"
         >
           <source src="/videos/pixar.mp4" type="video/mp4" />
         </video>
@@ -34,7 +34,7 @@ function StudioCard() {
           autoPlay
           loop
           playsInline
-          className="hidden object-cover rounded-lg group-hover:inline"
+          className="hidden object-cover mx-auto rounded-lg group-hover:inline"
         >
           <source src="/videos/marvel.mp4" type="video/mp4" />
         </video>
@@ -46,7 +46,7 @@ function StudioCard() {
           autoPlay
           loop
           playsInline
-          className="hidden object-cover rounded-lg group-hover:inline"
+          className="hidden object-cover mx-auto rounded-lg group-hover:inline"
         >
           <source src="/videos/star-wars.mp4" type="video/mp4" />
         </video>
@@ -62,7 +62,7 @@ function StudioCard() {
           autoPlay
           loop
           playsInline
-          className="hidden object-cover rounded-lg group-hover:inline"
+          className="hidden object-cover mx-auto rounded-lg group-hover:inline"
         >
           <source src="/videos/national-geographic.mp4" type="video/mp4" />
         </video>
@@ -80,7 +80,7 @@ export default StudioCard;
 //   autoPlay
 //   loop
 //   playsInline
-//   className="hidden object-cover rounded-lg group-hover:inline"
+//   className="hidden object-cover mx-auto rounded-lg group-hover:inline"
 // >
 //   <source src="/videos/disney.mp4" type="video/mp4"/>
 // </video>
