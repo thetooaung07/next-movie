@@ -1,4 +1,6 @@
-import Head from 'next/head'
+import Head from "next/head";
+import Header from "../components/Header";
+import Hero from "../components/Hero";
 
 export default function Home() {
   return (
@@ -7,8 +9,8 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>TOA+</h1>
-     
+      <Header></Header>
+      <Hero/>
     </div>
-  )
+  );
 }
