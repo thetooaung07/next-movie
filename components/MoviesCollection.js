@@ -3,13 +3,10 @@ import MovieCard from "./MovieCard";
 // Import Swiper styles
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Mousewheel, Scrollbar } from "swiper";
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-
-
-
 
 SwiperCore.use([Scrollbar, Mousewheel]);
 
@@ -35,12 +32,12 @@ function MoviesCollection({ results, title }) {
             },
           }}
         >
-
-        {results.map((result) => (
-          <SwiperSlide key={result.id}>
-            <MovieCard result={result} />
-          </SwiperSlide>
-        ))}</Swiper>
+          {results.map((result) => (
+            <SwiperSlide key={result.id}>
+              <MovieCard result={result} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </div>
   );

@@ -53,11 +53,7 @@ function StudioCard() {
       </div>
 
       <div className="studio-card group">
-        <Image
-          src="/images/national-geographic.png"
-          layout="fill"
-          objectFit="cover"
-        />
+        <Image src="/images/national-geographic.png" layout="fill" objectFit="cover" />
         <video
           autoPlay
           loop
@@ -73,15 +69,3 @@ function StudioCard() {
 
 export default StudioCard;
 
-// {/* <div className=" studio-card group">
-// {/* whenever you want to use layout fill make sure to add position relative, width and height to parent */}
-// <Image src="/images/disnep.png" layout="fill" objectFit="cover" />
-// <video
-//   autoPlay
-//   loop
-//   playsInline
-//   className="hidden object-cover mx-auto rounded-lg group-hover:inline"
-// >
-//   <source src="/videos/disney.mp4" type="video/mp4"/>
-// </video>
-// </div> */}

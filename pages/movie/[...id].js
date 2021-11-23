@@ -5,6 +5,8 @@ import { useState } from "react";
 import { PlusIcon, XIcon } from "@heroicons/react/solid";
 import ReactPlayer from "react-player/lazy";
 
+// TODO: use useEffect for session changes after adding authentication
+
 function Movie({ result }) {
   const BASE_URL = "https://image.tmdb.org/t/p/original";
   const [showPlayer, setShowPlayer] = useState(false);
@@ -18,7 +20,7 @@ function Movie({ result }) {
 
       <Header></Header>
 
-      <section className="relative z-50">
+      <section className="relative z-50 ">
         <div className="relative min-h-[calc(100vh-72px)]">
           <Image
             src={
@@ -64,13 +66,19 @@ function Movie({ result }) {
         </div>
 
         {/* Bg Overlay */}
-        {showPlayer && <div className="absolute inset-0 z-50 w-full h-full bg-black opacity-50" />}
+        {showPlayer && (
+          <div
+            className="absolute inset-0 z-50 w-full h-full bg-black opacity-50"
+            onClick={() => setShowPlayer(false)}
+          />
+        )}
         <div
           className={`absolute top-3 inset-x-[7%] md:inset-x-[13%] rounded overflow-hidden transition duration-1000 ${
             showPlayer ? "opacity-100 z-50" : "opacity-0"
           }`}
         >
-          <div className="flex items-center justify-between bg-black text-[#f9f9f9] p-3.5">
+          {/* Trailer control header bar */}
+          <div className="flex items-center justify-between bg-gray-900 text-[#f9f9f9] p-2">
             <span className="font-semibold">Play Trailer</span>
             <div
               className="cursor-pointer w-8 h-8 flex justify-center items-center rounded-lg opacity-50 hover:opacity-75 hover:bg-[#0F0F0F]"

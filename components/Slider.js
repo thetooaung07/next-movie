@@ -1,12 +1,12 @@
-import { Carousel } from "react-responsive-carousel"
+import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires to show a carousel
 
 function Slider() {
-   return (
-      // adding max-w-screen-2xl will make carousel completely responsive even on browser zoom in
-      // mx-auto for centering Carousel in center when zoom out
-      <section className="relative mx-auto mt-8 shadow-2xl max-w-screen-2xl">
-        <Carousel
+  return (
+    // adding max-w-screen-2xl will make carousel completely responsive even on browser zoom in
+    // mx-auto for centering Carousel in center when zoom out
+    <section className="relative mx-auto mt-8 shadow-2xl max-w-screen-2xl">
+      <Carousel
         autoPlay
         infiniteLoop
         showStatus={false}
@@ -26,9 +26,9 @@ function Slider() {
         <div>
           <img loading="lazy" src="/images/slider-4.jpeg" alt="" />
         </div>
-      </Carousel>  
-      </section>
-   )
+      </Carousel>
+    </section>
+  );
 }
 
-export default Slider
+export default Slider;
