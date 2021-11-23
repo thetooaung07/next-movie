@@ -12,7 +12,7 @@ export default function Home({
   topRatedMovies,
   topRatedShows,
 }) {
-  console.log(popularMovies)
+ 
   return (
     <div className="">
       <Head>
