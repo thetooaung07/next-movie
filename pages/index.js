@@ -18,6 +18,12 @@ export default function Home({
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
+{/*       
+          <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+          />           */}
+     
       </Head>
       <Header></Header>
       {/* <Hero/> */}
