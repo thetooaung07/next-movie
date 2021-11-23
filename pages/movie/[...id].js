@@ -20,7 +20,7 @@ function Movie({ result }) {
 
       <Header></Header>
 
-      <section className="relative z-50 ">
+      <section className="relative z-50">
         <div className="relative min-h-[calc(100vh-72px)]">
           <Image
             src={
@@ -77,30 +77,18 @@ function Movie({ result }) {
             showPlayer ? "opacity-100 z-50" : "opacity-0"
           }`}
         >
-          {/* Trailer control header bar don't forget to add relative to section if you want to use it xD */}
-          {/* <div className="flex items-center justify-between bg-gray-900 text-[#f9f9f9] p-2">
-            <span className="font-semibold">Play Trailer</span>
-            <div
-              className="cursor-pointer w-8 h-8 flex justify-center items-center rounded-lg opacity-50 hover:opacity-75 hover:bg-[#0F0F0F]"
-              onClick={() => setShowPlayer(false)}
-            >
-              <XIcon className="h-5" />
-            </div>
-          </div> */}
           {/*add another div to define width and height so that react player won't take all the way to screen  */}
-          <div>
-            
-          </div>
-          <div className="relative pt-[55.25%]">
-            <ReactPlayer
-              url={`https://www.youtube.com/watch?v=${result.videos?.results[index]?.key}`}
-              width="100%"
-              height="100%"
-              style={{ position: "absolute", top: "0", left: "0" }}
-              controls={true}
-              playing={showPlayer}
-            />
-          </div>
+
+          <div className="relative pt-[55.5%]">
+              <ReactPlayer
+                url={`https://www.youtube.com/watch?v=${result.videos?.results[index]?.key}`}
+                width="100%"
+                height="100%"
+                style={{ position: "absolute", top: "0", left: "0" }}
+                controls={true}
+                playing={showPlayer}
+              />
+            </div>
         </div>
       </section>
     </div>
