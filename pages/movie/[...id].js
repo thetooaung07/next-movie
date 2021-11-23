@@ -73,12 +73,12 @@ function Movie({ result }) {
           />
         )}
         <div
-          className={`absolute top-3 inset-x-[7%] md:inset-x-[13%] rounded overflow-hidden transition duration-1000 ${
+          className={`absolute top-0 inset-x-[7%] md:inset-x-[13%] rounded overflow-hidden transition duration-1000 ${
             showPlayer ? "opacity-100 z-50" : "opacity-0"
           }`}
         >
-          {/* Trailer control header bar */}
-          <div className="flex items-center justify-between bg-gray-900 text-[#f9f9f9] p-2">
+          {/* Trailer control header bar don't forget to add relative to section if you want to use it xD */}
+          {/* <div className="flex items-center justify-between bg-gray-900 text-[#f9f9f9] p-2">
             <span className="font-semibold">Play Trailer</span>
             <div
               className="cursor-pointer w-8 h-8 flex justify-center items-center rounded-lg opacity-50 hover:opacity-75 hover:bg-[#0F0F0F]"
@@ -86,8 +86,12 @@ function Movie({ result }) {
             >
               <XIcon className="h-5" />
             </div>
+          </div> */}
+          {/*add another div to define width and height so that react player won't take all the way to screen  */}
+          <div>
+            
           </div>
-          <div className="relative pt-[56.25%]">
+          <div className="relative pt-[55.25%]">
             <ReactPlayer
               url={`https://www.youtube.com/watch?v=${result.videos?.results[index]?.key}`}
               width="100%"
