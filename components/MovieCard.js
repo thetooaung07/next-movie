@@ -5,7 +5,7 @@ function MovieCard({ result }) {
   const BASE_URL = "https://image.tmdb.org/t/p/original";
   const router = useRouter();
 
-  console.log(result);
+
   return (
     //   min-w-[250px] min-h-[170px] md:min-w-[330px] md:min-h-[210px]
     <div

@@ -4,6 +4,7 @@ import Image from "next/dist/client/image";
 import { useState } from "react";
 import { PlusIcon, XIcon } from "@heroicons/react/solid";
 import ReactPlayer from "react-player/lazy";
+import { PlayIcon } from "@heroicons/react/outline";
 
 // TODO: use useEffect for session changes after adding authentication
 
@@ -37,9 +38,11 @@ function Movie({ result }) {
             {result.title || result.original_name}
           </h1>
           <div className="flex items-center space-x-3 md:space-x-5">
-            <button className="text-xs text-black md:text-base bg-[#f9f9f9] flex items-center justify-center py-2.5 px-6 rounded hover:bg-[#d6d6d6]">
-              <img src="/images/play-icon-black.svg" alt="" srcset="" className="h-6 md:h-8" />
-              <span className="font-medium tracking-wide uppercase">Play</span>
+          <button className="text-xs text-black md:text-base bg-white flex items-center border  justify-center py-2.5 px-6 rounded  hover:border group hover:bg-white/30 transition-colors">
+              <PlayIcon className="h-6 mr-1 text-gray-800 md:h-8 group-hover:text-white" />
+              <span className="font-medium tracking-widest uppercase group-hover:text-white">
+                Play
+              </span>
             </button>
 
             <button

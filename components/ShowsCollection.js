@@ -7,7 +7,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-SwiperCore.use([Scrollbar, Mousewheel]);
+SwiperCore.use([Scrollbar]);
+// SwiperCore.use([Scrollbar, Mousewheel]);
 
 function ShowsCollection({ results, title }) {
   return (
@@ -15,7 +16,7 @@ function ShowsCollection({ results, title }) {
       <h2 className="font-semibold">{title}</h2>
       <div className="flex p-2 -m-2 space-x-6 ">
         <Swiper
-          mousewheel={{ releaseOnEdges: true }}
+          // mousewheel={{ releaseOnEdges: true }}  //if you want a horizontal mouse
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
           spaceBetween={10}
