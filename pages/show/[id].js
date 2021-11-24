@@ -3,7 +3,7 @@ import Header from "../../components/Header";
 import Image from "next/dist/client/image";
 import { useState } from "react";
 import { PlusIcon } from "@heroicons/react/solid";
-import { PlayIcon } from "@heroicons/react/outline";
+import { PlayIcon, PresentationChartLineIcon } from "@heroicons/react/outline";
 import ReactPlayer from "react-player/lazy";
 
 // TODO: use useEffect for session changes after adding authentication
@@ -39,19 +39,21 @@ function Show({ result }) {
             {result.title || result.original_name}
           </h1>
           <div className="flex items-center space-x-3 md:space-x-5">
-            <button className="text-xs text-black md:text-base bg-white flex items-center border  justify-center py-2.5 px-6 rounded  hover:border group hover:bg-white/30 transition-colors">
-              <PlayIcon className="h-6 mr-1 text-gray-800 md:h-8 group-hover:text-white" />
-              <span className="font-medium tracking-widest uppercase group-hover:text-white">
+            <button className="text-xs text-black md:text-base bg-white flex items-center border  justify-center py-3.5 px-6 rounded  hover:border group hover:bg-white/20 transition-colors">
+              <PlayIcon className="h-6 mr-1.5 text-gray-800  group-hover:text-white" />
+              <span className="font-semibold tracking-widest text-gray-800 uppercase group-hover:text-white">
                 Play
               </span>
             </button>
 
             <button
-              className="text-xs md:text-base bg-black/30 text-[#f9f9f9] border border-[#f9f9f9] flex items-center justify-center py-2.5 px-6 rounded hover:bg-[#c6c6c6]"
+              className="text-xs md:text-base bg-black/30 text-[#f9f9f9] border border-[#f9f9f9] flex items-center justify-center py-3.5 px-6 rounded hover:bg-white/70 group"
               onClick={() => setShowPlayer(true)}
             >
-              <img src="/images/play-icon-white.svg" alt="" className="h-6 md:h-8" />
-              <span className="font-medium tracking-wide uppercase">Trailer</span>
+              <PresentationChartLineIcon className="h-6 mr-1.5 group-hover:text-gray-800 " />
+              <span className="font-semibold tracking-widest uppercase group-hover:text-gray-800 ">
+                Trailer
+              </span>
             </button>
 
             {/* bg-black/60 maps to opacity */}
